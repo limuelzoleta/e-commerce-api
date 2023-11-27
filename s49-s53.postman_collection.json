@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "1787c292-b6f0-4c0f-8e65-e501edb41f17",
+		"name": "s49-s53",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30094406"
+	},
+	"item": [
+		{
+			"name": "[USER] register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"User24\",\n    \"lastName\": \"User\",\n    \"email\": \"user24@mail.com\",\n    \"password\": \"user24\",\n    \"mobileNo\": \"09128888888\",\n    \"shippingAddress\": \"Manila\",\n    \"cartId\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "[USER] login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user24@mail.com\",\n    \"password\": \"user24\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "[USER] update-admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI0YTFmMDdiMzA3M2ZmMjc5YTEwZSIsImVtYWlsIjoibGVpYXRpZW56YUBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTQ1NzgwNn0.jEpI4UtHuEfmayb-B5Uq3k6_9-4biUQtlzGyBtSu03o"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"654b4b2a44d4a76a6d25bcbb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/users/update-admin"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] create-product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNWNmMzc5Nzk4OGM5YmFmZGMxOSIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTc1MDJ9.bOThAWCpmzmQWk36FAE8tIwWiyIDCt8Eh5Ita9514fk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"notebook\",\n    \"description\": \"notebook is pricey but your handwriting will stay messy.\",\n    \"price\": 349,\n    \"stockQuantity\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] get-active-products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNWNmMzc5Nzk4OGM5YmFmZGMxOSIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0ODk0NjF9.cTV71ibm4ZPBON4h0VgBSUIj_vEKw6FsMdt-lvhdsas"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] get-all-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/products/all"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] get-a-specific-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/products/654bb623c441a9e8ceabe382"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] archive-product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNjJkMzc5Nzk4OGM5YmFmZGMxZCIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk0OTMyNjJ9.AuRtjlmkDHv_9pr-l5i90y0iYgLLcNVKK4kYMTbtA2o"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/products/654bb623c441a9e8ceabe382/archive"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] update-product-info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNWNmMzc5Nzk4OGM5YmFmZGMxOSIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0ODk0NjF9.cTV71ibm4ZPBON4h0VgBSUIj_vEKw6FsMdt-lvhdsas"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stockQuantity\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/products/654bb623c441a9e8ceabe382"
+			},
+			"response": []
+		},
+		{
+			"name": "[PRODUCT] activate-product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNjJkMzc5Nzk4OGM5YmFmZGMxZCIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk0OTMyNjJ9.AuRtjlmkDHv_9pr-l5i90y0iYgLLcNVKK4kYMTbtA2o"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": "localhost:4001/products/654bb623c441a9e8ceabe382/activate"
+			},
+			"response": []
+		},
+		{
+			"name": "[USER] get-user-details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1NzU3NzF9.lF5XN_T9i1Fg-77eXCP0b-qZUBnmxlFbDsaoWXNWwn4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/users/654d6f931fc2969be0cb6959/userDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "[CART] add-to-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1NzM2ODd9.eQOee1byv93Ra_F58F_EF5NjlPkJSIwsBm851Ph99v4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"654c4729140f3bca9cbeac7e\",\n    \"quantity\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/cart/add-product"
+			},
+			"response": []
+		},
+		{
+			"name": "[CART] remove-product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQwMGRkZGEwMWNiODFiYzNkY2Y0OCIsImVtYWlsIjoidXNlcjZAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5NTQ1MzEzfQ.C-Hq1GYCIbydbAsOpx8j67Wb8lyLNYaluvMc3ex1Wms"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"654c4673fe51d160cf01e982\",\n    \"quantity\": 17\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/cart/remove-product"
+			},
+			"response": []
+		},
+		{
+			"name": "[ORDER] checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1Nzc4ODV9.TMUnD9UNsBLVjTrTu45EpXq4xia1StksYeTDQul5eoU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"productId\": \"654c4729140f3bca9cbeac7e\",\n            \"quantity\": 10\n        },\n        {\n            \"productId\": \"654c4673fe51d160cf01e982\",\n            \"quantity\": 20\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4001/orders/checkout"
+			},
+			"response": []
+		},
+		{
+			"name": "[ORDER] get-auth-user-orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1NzU3NzF9.lF5XN_T9i1Fg-77eXCP0b-qZUBnmxlFbDsaoWXNWwn4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/orders/"
+			},
+			"response": []
+		},
+		{
+			"name": "[ORDER] get-all-user-orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGMyNWNmMzc5Nzk4OGM5YmFmZGMxOSIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1NDMzODR9.Hc46S8Ai6XgT_JP74lou9m7Loc012shUfE3etZgunKM"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/orders/all"
+			},
+			"response": []
+		},
+		{
+			"name": "[CART] checkout-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1ODE3Mjl9.GZ_35BAY-ZYONSuB2kR9IG-ENicipm18vaDaFzFdrvw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "localhost:4001/cart/checkout"
+			},
+			"response": []
+		},
+		{
+			"name": "[CART] view-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1ODE3Mjl9.GZ_35BAY-ZYONSuB2kR9IG-ENicipm18vaDaFzFdrvw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:4001/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "[CART] unselect-item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGQ2ZjkzMWZjMjk2OWJlMGNiNjk1OSIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTk1NzM2ODd9.eQOee1byv93Ra_F58F_EF5NjlPkJSIwsBm851Ph99v4"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": "localhost:4001/cart/654c4729140f3bca9cbeac7e/unselect"
+			},
+			"response": []
+		}
+	]
+}
